@@ -1,0 +1,71 @@
+/* Tajawal, self-hosted */
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:400;font-display:swap;src:url("./fonts/tajawal-400-arabic.woff2") format("woff2");unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:400;font-display:swap;src:url("./fonts/tajawal-400-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:500;font-display:swap;src:url("./fonts/tajawal-500-arabic.woff2") format("woff2");unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:500;font-display:swap;src:url("./fonts/tajawal-500-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:700;font-display:swap;src:url("./fonts/tajawal-700-arabic.woff2") format("woff2");unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:700;font-display:swap;src:url("./fonts/tajawal-700-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:800;font-display:swap;src:url("./fonts/tajawal-800-arabic.woff2") format("woff2");unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
+@font-face{font-family:"Tajawal";font-style:normal;font-weight:800;font-display:swap;src:url("./fonts/tajawal-800-latin.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{direction:rtl;margin:0;background:var(--s-FBFCFB, #FBFCFB);color:var(--t-16211F, #16211F);font-family:"Tajawal",system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{font-family:"Tajawal",system-ui,sans-serif}
+a{color:var(--t-2F6666, #2F6666)}a:hover{color:var(--t-16211F, #16211F)}
+input,select,textarea,button{font-family:inherit;font-size:16px}
+:focus-visible{outline:2px solid var(--t-2F6666, #2F6666);outline-offset:2px}
+*{box-sizing:border-box}
+@keyframes hjfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* hover states of the design (inline styles carry the resting state) */
+.hv-nav:hover{background:var(--s-D3E0D7, #D3E0D7) !important}
+.hv-teal:hover{background:var(--s-245252, #245252) !important;color:#FFFFFF !important}
+.hv-soft:hover{background:var(--s-EFF4F0, #EFF4F0) !important;color:var(--t-2F6666, #2F6666) !important}
+.hv-social:hover{background:#2F6666 !important;color:#FFFFFF !important}
+.hv-row:hover{border-color:var(--t-2F6666, #2F6666) !important}
+
+/* honeypot: off-screen for people, present for bots */
+.hp{position:absolute !important;inset-inline-start:-9999px !important;width:1px;height:1px;overflow:hidden}
+
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.admin-body{background:var(--s-F4F7F5, #F4F7F5)}
+
+@media print{
+  body,.admin-body{background:#FFFFFF !important}
+  body *{visibility:hidden}
+  [data-print],[data-print] *{visibility:visible}
+  [data-print]{position:absolute !important;inset:0 !important;max-height:none !important;overflow:visible !important;box-shadow:none !important;border:none !important}
+  [data-noprint],[data-noprint] *{display:none !important}
+}
+
+/* tagline beside the header logo: only where the header has room */
+.hj-tag{display:none}
+@media (min-width:1000px){.hj-tag{display:block}}
+
+/* phones: the header has room for the logo and the main button only */
+@media (max-width:520px){.hj-nav{display:none !important}.hj-bar{grid-template-columns:minmax(0,1fr) auto !important}.hj-logo{height:32px !important}.hj-end{gap:2px !important}}
+@media (min-width:521px){.hj-phone{display:none !important}}
+@media (max-width:350px){.hj-logo{height:26px !important}.hj-cta{padding:0 14px !important;font-size:15px !important}.hj-ico{width:40px !important;height:40px !important}}
+
+/* ── night mode ─────────────────────────────────────────────────────────
+   src/lib/css.js turns every colour of the design into a variable:
+   --s-* paints surfaces (background, border, shadow), --t-* is text.
+   Only the colours that must change at night are listed here; print
+   always uses the light design. */
+@media screen{
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    /* surfaces */
+    --s-FBFCFB:#101917; --s-FFFFFF:#1A2623; --s-E3ECE6:#22302C; --s-F1F4EC:#131D1A;
+    --s-EEF2DA:#232F1E; --s-F4F7F5:#0F1715; --s-EFF4F0:#22302C; --s-D3E0D7:#2E3F3A;
+    --s-16211F:#0B1211; --s-2F6666:#357373; --s-245252:#2B6060;
+    --s-DCE5DF:#2E3F3A; --s-CBD9D0:#3A4D49; --s-EDF2EE:#26332F; --s-C6D3CC:#3A4D49;
+    --s-F6EDED:#3A2222; --s-E5CFCF:#5A3535; --s-A54B4B:#D98080;
+    /* text */
+    --t-16211F:#EAF1EE; --t-546965:#9FB3AE; --t-2B3D3A:#C9D6D2; --t-2F6666:#7FC4BD;
+    --t-8B9A95:#7F908B; --t-A54B4B:#E59A9A; --t-7D8A2A:#C3CF5A;
+  }
+  :root[data-theme="dark"] .only-light{display:none !important}
+  :root:not([data-theme="dark"]) .only-dark{display:none !important}
+}
+@media print{.only-dark{display:none !important}}
